@@ -1,4 +1,4 @@
-# zookeeper - Role to install zookeeper
+# zookeeper - Ansible role to install zookeeper
 
 #### Installation
 ```
