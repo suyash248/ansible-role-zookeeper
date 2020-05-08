@@ -1,5 +1,10 @@
 # zookeeper - Role to install zookeeper
 
+#### Installation
+```
+ansible-galaxy install suyash248.ansible_role_zookeeper
+```
+
 #### Prerequisites
 - **Java 1.8**
 
