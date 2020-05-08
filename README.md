@@ -1,4 +1,4 @@
-# zKeeper - Role to install zookeeper
+# zookeeper - Role to install zookeeper
 
 #### Prerequisites
 - **Java 1.8**
@@ -9,25 +9,25 @@ Following variables can be overwritten by passing `extra-vars` option, or in a t
 
 ```yaml
 ---
-	---
-	zookeeper_home: "/etc/installers/zookeeper"
-	zookeeper:
-	  home: "{{ zookeeper_home }}"
-	  version: 3.6.1
-	  scala_version: 2.13
-	  config_file: "zoo.cfg"
-	  data_dir: "{{ zookeeper_home }}/data/zookeeper"
-	  log_dir: "{{ zookeeper_home }}/logs"
-	  apt_cache_timeout: 3600
-	  client_port: 2181
-	  init_limit: 5
-	  sync_limit: 2
-	  tick_time: 2000
-	  hosts_file: "/etc/hosts"
-	  daemon:
-	    name: "zookeeper"
-	    type: "service" # systemctl
-	    start_on_boot: "yes" # no
+---
+zookeeper_home: "/etc/installers/zookeeper"
+zookeeper:
+  home: "{{ zookeeper_home }}"
+  version: 3.6.1
+  scala_version: 2.13
+  config_file: "zoo.cfg"
+  data_dir: "{{ zookeeper_home }}/data/zookeeper"
+  log_dir: "{{ zookeeper_home }}/logs"
+  apt_cache_timeout: 3600
+  client_port: 2181
+  init_limit: 5
+  sync_limit: 2
+  tick_time: 2000
+  hosts_file: "/etc/hosts"
+  daemon:
+    name: "zookeeper"
+    type: "service" # systemctl
+    start_on_boot: "yes" # no
 ```
 
 #### Inventory/hosts
@@ -39,7 +39,7 @@ zookeeper3 ansible_host=116.203.142.23 alias=zookeeper3 private_ip=172.125.12.84
 ```
 
 #### Playbook
-Sample playbook can be found in `zKeeper/tests` directory.
+Sample playbook can be found in `zookeeper/tests` directory.
 
 ```yaml
 ---
